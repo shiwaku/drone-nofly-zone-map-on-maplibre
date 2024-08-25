@@ -29,14 +29,14 @@
       "maxzoom": 14,
       "attribution": "<a href='https://www.e-stat.go.jp/gis' target='_blank'>政府統計の総合窓口[e-Stat] 人口集中地区（2020年）</a>"
     },
-    "airport": {
+    "kokuarea": {
       "type": "vector",
       "tiles": [
-        "pmtiles://https:///shiworks.xsrv.jp/pmtiles-data/ksj/C28-21_Airport.pmtiles/{z}/{x}/{y}"
+        "pmtiles://https://shiworks.xsrv.jp/pmtiles-data/gsi/kokuarea/kokuarea.pmtiles/{z}/{x}/{y}"
       ],
       "minzoom": 0,
       "maxzoom": 14,
-      "attribution": "<a href='https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C28-2021.html' target='_blank'>国土数値情報 空港データ</a>"
+      "attribution": "<a href='https://maps.gsi.go.jp/#9/35.680725/139.568939/&base=pale&ls=pale%7Cdid2015%7Ckokuarea&blend=0&disp=111&lcd=pale&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m' target='_blank'>地理院地図 飛行禁止区域（空港等の周辺空域（航空局））</a>"
     }
   },
   "layers": [
@@ -70,26 +70,6 @@
       "source": "h",
       "paint": {
         "raster-opacity": 0.3
-      }
-    },
-    {
-      "id": "did",
-      "type": "fill",
-      "source": "did",
-      "source-layer": "2020_did_ddsw_0147_JGD2011fgb",
-      "paint": {
-        "fill-color": "rgb(255, 191, 0)",
-        "fill-opacity": 1
-      }
-    },
-    {
-      "id": "airport",
-      "type": "fill",
-      "source": "airport",
-      "source-layer": "C2821_Airport",
-      "paint": {
-        "fill-color": "rgb(0, 0, 255)",
-        "fill-opacity": 1
       }
     },
     {
@@ -14039,6 +14019,47 @@
         ],
         "text-halo-color": "rgba(255,255,255,1)",
         "text-halo-width": 1
+      }
+    },
+    {
+      "id": "did",
+      "type": "fill",
+      "source": "did",
+      "source-layer": "2020_did_ddsw_0147_JGD2011fgb",
+      "paint": {
+        "fill-color": "rgb(255, 0, 0)",
+        "fill-opacity": 0.3
+      }
+    },
+    {
+      "id": "did-outline",
+      "type": "line",
+      "source": "did",
+      "source-layer": "2020_did_ddsw_0147_JGD2011fgb",
+      "paint": {
+        "line-color": "rgb(255, 0, 0)",
+        "line-width": 0.75
+      }
+    },
+    {
+      "id": "kokuarea_polygon",
+      "type": "fill",
+      "source": "kokuarea",
+      "source-layer": "kokuarea_polygon",
+      "paint": {
+        "fill-color": "rgb(0, 255, 0)",
+        "fill-opacity": 0.3
+      }
+    },
+    {
+      "id": "kokuarea_line",
+      "type": "line",
+      "source": "kokuarea",
+      "source-layer": "kokuarea_line",
+      "paint": {
+        "line-color": "rgb(0, 0, 0)",
+        "line-opacity": 1,
+        "line-width": 1
       }
     }
   ]
