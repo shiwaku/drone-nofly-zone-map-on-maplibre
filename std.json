@@ -37,6 +37,15 @@
       "minzoom": 0,
       "maxzoom": 14,
       "attribution": "<a href='https://maps.gsi.go.jp/#9/35.680725/139.568939/&base=pale&ls=pale%7Cdid2015%7Ckokuarea&blend=0&disp=111&lcd=pale&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m' target='_blank'>地理院地図 飛行禁止区域（空港等の周辺空域（航空局））</a>"
+    },
+    "plateau": {
+      "type": "vector",
+      "tiles": [
+        "pmtiles://https://pmtiles-data.s3.ap-northeast-1.amazonaws.com/plateau/PLATEAU_2023_LOD0.pmtiles/{z}/{x}/{y}"
+      ],
+      "minzoom": 16,
+      "maxzoom": 16,
+      "attribution": "<a href='https://beta.source.coop/repositories/pacificspatial/flateau/description/' target='_blank'>Flateau (Building footprint data in Japan)</a>"
     }
   },
   "layers": [
@@ -14060,6 +14069,19 @@
         "line-color": "rgb(0, 0, 0)",
         "line-opacity": 1,
         "line-width": 1
+      }
+    },
+    {
+      "id": "lod0-building",
+      "type": "fill-extrusion",
+      "source": "plateau",
+      "source-layer": "PLATEAU_2023_LOD0",
+      "minzoom": 16,
+      "maxzoom": 23,
+      "paint": {
+        "fill-extrusion-color": "#0000FF",
+        "fill-extrusion-opacity": 1,
+        "fill-extrusion-height": ["get", "measured_height"]
       }
     }
   ]
