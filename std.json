@@ -14079,7 +14079,7 @@
       "minzoom": 16,
       "maxzoom": 23,
       "paint": {
-        "fill-extrusion-color": "#0000FF",
+        "fill-extrusion-color": "#FFFFFF",
         "fill-extrusion-opacity": 1,
         "fill-extrusion-height": ["get", "measured_height"]
       }
