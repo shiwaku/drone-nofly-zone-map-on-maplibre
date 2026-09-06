@@ -23,7 +23,7 @@
     "did": {
       "type": "vector",
       "tiles": [
-        "pmtiles://https://xs489works.xsrv.jp/pmtiles-data/r2DID/2020_did_ddsw_01-47_JGD2011.pmtiles/{z}/{x}/{y}"
+        "pmtiles://https://shi-works.com/pmtiles/r2DID/2020_did_ddsw_01-47_JGD2011.pmtiles/{z}/{x}/{y}"
       ],
       "minzoom": 0,
       "maxzoom": 14,
@@ -32,7 +32,7 @@
     "kokuarea": {
       "type": "vector",
       "tiles": [
-        "pmtiles://https://shiworks.xsrv.jp/pmtiles-data/gsi/kokuarea/kokuarea.pmtiles/{z}/{x}/{y}"
+        "pmtiles://https://shi-works.com/pmtiles/gsi/kokuarea/kokuarea.pmtiles/{z}/{x}/{y}"
       ],
       "minzoom": 0,
       "maxzoom": 14,
